@@ -17,6 +17,7 @@ public class LoginPageController {
     LoginService loginService;
     private int counter = 0;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/")
     @ResponseBody
     public GreetingDTO sayHello(@RequestParam(name="name", required=false, defaultValue="Harmihacker") String name) {
@@ -24,6 +25,7 @@ public class LoginPageController {
         return new GreetingDTO(counter, "Tere tulemast harmihacki API-sse, " + name + "! Sa oled meie " + counter + "-s külastaja!");
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/login")
     @ResponseBody
     public LoginSuccessDTO login(@RequestBody PasswordDTO passwordDTO) {
