@@ -9,5 +9,4 @@ public class HarmihackApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HarmihackApplication.class, args);
 	}
-
 }
