@@ -9,7 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GreetingDTO {
-    private long id;
-    private String content;
+public class PasswordDTO {
+    private String password;
 }
