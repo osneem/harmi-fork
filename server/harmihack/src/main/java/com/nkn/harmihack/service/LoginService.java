@@ -2,12 +2,14 @@ package com.nkn.harmihack.service;
 
 import com.nkn.harmihack.dto.LoginSuccessDTO;
 import com.nkn.harmihack.dto.PasswordDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoginService {
 
-    private static final String password = "123";
+    @Value("${admin.password}")
+    private String password;
 
     public LoginSuccessDTO checkPassword(PasswordDTO passwordDTO){
         if (passwordDTO.getPassword().equals(password)) {
